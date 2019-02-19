@@ -1,7 +1,7 @@
-public class Square implements Shape {
+public final class Square implements Shape {
 
-    private int side;
-    private Point centerPoint;
+    private final int side;
+    private final Point centerPoint;
 
     public Square(Point centerPoint, int side)
     {

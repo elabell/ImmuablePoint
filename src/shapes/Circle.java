@@ -1,8 +1,8 @@
 
 
 public final class Circle implements Shape {
-    private int radius;
-    private Point centerPoint;
+    private final int radius;
+    private final Point centerPoint;
 
     public Circle(Point p, int radius) {
         this.radius = radius;
@@ -11,7 +11,7 @@ public final class Circle implements Shape {
 
     @Override
     public Boolean contains(Point p) {
-        return this.centerPoint.distance(p) <= (double)this.radius ? true : false;
+        return this.centerPoint.distance(p) <= (double)this.radius; //? true : false;
     }
 
 

@@ -3,8 +3,8 @@
 
 public final class Rectangle implements Shape {
 
-  private Point pointOfRect;
-  private int width, height;
+  private final Point pointOfRect;
+  private final int width, height;
 
   public Rectangle(Point pointOfRect, int width, int height) {
     this.pointOfRect = pointOfRect;
@@ -18,12 +18,11 @@ public final class Rectangle implements Shape {
   public Boolean contains(Point p) {
 
     return
-
             p.getX()>= this.pointOfRect.getX()
          && p.getY()<= this.pointOfRect.getY()
          && p.getX()<= this.pointOfRect.getX() + this.width
-         && p.getY()>= this.pointOfRect.getY() - this.height
-                    ? true : false;
+         && p.getY()>= this.pointOfRect.getY() - this.height;
+
 
 
   }
